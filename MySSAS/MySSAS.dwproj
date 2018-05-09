@@ -6,10 +6,113 @@
     <Name>MySSAS.database</Name>
     <FullPath>MySSAS.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Sales.cube</Name>
+      <FullPath>Sales.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Sales.partitions</Name>
+          <FullPath>Sales.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>test_h.cube</Name>
+      <FullPath>test_h.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>test_h.partitions</Name>
+          <FullPath>test_h.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>sales_hy.cube</Name>
+      <FullPath>sales_hy.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>sales_hy.partitions</Name>
+          <FullPath>sales_hy.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>sales_bus.cube</Name>
+      <FullPath>sales_bus.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>sales_bus.partitions</Name>
+          <FullPath>sales_bus.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Customer.dim</Name>
+      <FullPath>Customer.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Enterprise.dim</Name>
+      <FullPath>Enterprise.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Supplier.dim</Name>
+      <FullPath>Supplier.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Temps.dim</Name>
+      <FullPath>Temps.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Category.dim</Name>
+      <FullPath>Category.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Product.dim</Name>
+      <FullPath>Product.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Sub_category.dim</Name>
+      <FullPath>Sub_category.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Region.dim</Name>
+      <FullPath>Region.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>Talend DW.ds</Name>
+      <FullPath>Talend DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>Talend DW.dsv</Name>
+      <FullPath>Talend DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>Talend DW</Id>
+            <Name>Talend DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=Talend_DW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>Talend DW</Id>
+            <Name>Talend DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
