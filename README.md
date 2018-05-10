@@ -29,4 +29,4 @@ from [sales_esp] ;
 
 ### Dashbords
 
-![Screenshot](SPA dashborads.PNG)
+![Screenshot](dash.PNG)
