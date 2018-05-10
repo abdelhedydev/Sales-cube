@@ -26,6 +26,19 @@ on columns,
 on rows
 from [sales_esp] ;
 ```
+Revenue Pourcentage By Product 
+```
+with member measures.tot as
+IIF(([Measures].[Cout],[Product].[Product])=0,
+null,
+[Measures].[Cout] /
+ ([Measures].[Cout],[Product].[Product])
+ ), FORMAT_STRING ="PERCENT"
+
+select {[Measures].[Cout],[Measures].[tot]} on columns,
+		non empty [Product].[Product Name].members on rows
+from sales_hy;
+```
 
 ### Dashbords
 
