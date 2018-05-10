@@ -29,4 +29,4 @@ from [sales_esp] ;
 
 ### Dashbords
 
-![Screenshot](Sales-cube/SPA dashborads.PNG )
+![Screenshot](SPA dashborads.PNG)
